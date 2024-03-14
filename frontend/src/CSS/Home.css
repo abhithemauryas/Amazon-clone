@@ -1,0 +1,95 @@
+.m-comtainer{
+    /* border: 11px solid red; */
+    width: 100%;
+    background-color: rgb(234, 237, 237);
+    /* max-width: 1400px; */
+    margin: auto;
+    height: fit-content;
+}
+.Banner {
+    width: 100%;
+    display: flex;
+   
+}
+.Banner>img {
+    display: flex;
+    width: 100%;
+   
+   
+    
+} 
+.Main {
+
+/* margin-top: -80px; */
+
+display: grid;
+justify-content: center;
+place-items: center;
+/* border: 1px solid rgb(149, 237, 18); */
+grid-auto-rows: 450px 450px;
+grid-template-columns: repeat(4, 300px);
+grid-gap: 50px;
+/* margin-bottom: 40px; */
+}
+@media only screen and (max-width:600px) and (max-width:1200px) {
+   .Main{
+    grid-template-columns: repeat(3,30%);
+   }
+   .Banner>img{
+    width: 100%;
+    height: auto;
+     display: flex;
+    
+     
+ }
+   /* .Banner{
+    display: flex;
+    border: 11px solid red;
+    width: 100% !important;
+  
+  
+   
+} */
+  
+   
+    
+} 
+/* @media only screen and (max-width:600px) and (max-width:1800px) {
+    
+    .Banner>img{
+    width: 100%;
+    height: auto;
+     display: flex;
+    
+     
+ }
+} */
+.Parent_main{
+    margin-top: -88px;
+ width: 100%;
+ /* margin: auto; */
+ /* border: 5px solid green; */
+
+}
+@media only screen and (max-width: 600px) and (min-width: 40px){
+    .Main{
+        grid-template-columns: repeat(2,30%);
+       }
+       .Banner>img{
+        width: 100%;
+        height: auto;
+         display: flex;
+        
+         
+     }
+}
+@media only screen and (max-width:600px) and (max-width:1200px) {
+    /* .Banner>img{
+      display: flex;
+      border: 11px solid red;
+      width: 100% !important;
+     
+    
+     
+ } */
+  }

@@ -1,0 +1,136 @@
+.Payment-Container{
+  width: 100%;
+  background-color: rgb(234, 237, 237);
+}
+
+.Pay-Main {
+  padding: 15px;
+  display: flex;
+}
+  @media only screen and (max-width: 1200px) {
+   .Pay-Main{
+    flex-direction: column;
+   }
+  
+  }
+
+
+.Review {
+  background-color: #fff;
+  flex: 0.7;
+  padding: 15px;
+}
+.Review>h2 {
+    font-weight: 500;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 15px;
+  }
+
+
+.Address-Container{
+  margin-top: 20px;
+}
+.Address-Container-div {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.Address-Container-div p {
+      font-size: 14px;
+      margin-top: 4px;
+    }
+  
+
+
+.Payment-Container {
+  margin-top: 15px;
+}
+.Payment-Container>div {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.Payment-Container>p {
+      font-size: 14px;
+    }
+     
+
+
+.Order-Container{
+  margin-top: 30px;
+}
+
+/* const Product = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Image = styled.div`
+  flex: 0.3;
+  img {
+    width: 100%;
+  }
+`;
+const Description = styled.div`
+  flex: 0.7; */
+
+  h4 {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  p {
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  button {
+    background-color: transparent;
+    color: #1384b4;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+.Subtotal {
+  flex: 0.3;
+  background-color: #fff;
+  margin-left: 15px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+  @media only screen and (max-width: 1200px) {
+   .Subtotal{
+    flex: none;
+    margin-top: 20px;
+   }
+  }
+  p {
+    font-size: 20px;
+  }
+
+  small {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    span {
+      margin-left: 10px;
+    }
+  }
+
+  button {
+    width: 65%;
+    height: 33px;
+    margin-top: 20px;
+    background-color: #ffd814;
+    border: none;
+    outline: none;
+
+    border-radius: 8px;
+  }

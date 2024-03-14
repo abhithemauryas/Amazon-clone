@@ -1,0 +1,138 @@
+.Checkout-Containe{
+  width: 100%;
+  /* max-width: 1400px; */
+  height: fit-content;
+  margin: auto;
+  background-color: rgb(234, 237, 237);
+  border: 11px solid red;
+  position: relative;
+  
+}
+
+.Checkout-Main{
+    display: flex;
+  padding: 15px;
+  margin-top: 2%;
+  /* border: 12px solid red; */
+
+}
+@media only screen and (max-width: 1200px) {
+    .Checkout-Main{
+        flex-direction: column;
+    }
+
+}
+.Checkout-Shopping{
+    padding: 15px;
+    background-color: #fff;
+    flex: 0.7;
+  
+} 
+  
+.Checkout-Shopping>h2 {
+      font-weight: 500;
+      border-bottom: 1px solid lightgray;
+      padding-bottom: 15px;
+    } 
+
+@media only screen and (max-width: 1200px) {
+ .Checkout-Shopping{
+        flex: none;
+    }
+}
+
+.Subtotal{
+flex: 0.3;
+background-color: #fff;
+margin-left: 15px;
+height: 200px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+ .Subtotal{
+    flex: none;
+  margin-top: 20px;
+}
+}
+.Subtotal>p {
+  font-size: 20px;
+  color: red;
+}
+
+.small {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+span {
+    margin-left: 10px;
+  
+}
+
+.Proceed-Button{
+  width: 65%;
+  height: 33px;
+  margin-top: 20px;
+  background-color: #ffd814;
+  border: none;
+  outline: none;
+
+  border-radius: 8px;
+} 
+
+
+.Checkout-Product{
+  display: flex;
+  align-items: center;
+    /* border: 1px solid red;  */
+    height: 300px;
+ 
+  
+}
+.Checkout-Image{
+flex: 0.3;
+
+}
+.Checkout-Image>img {
+  width: 100%;
+  /* border: 1px solid blue; */
+  height: 300px;
+  object-fit: contain;
+ 
+}
+
+.Description{
+  flex: 0.7;
+}
+.Description>h4{
+  font-weight: 600;
+  font-size: 18px;
+}
+.Description >p{
+  font-weight: 600;
+  margin-top: 10px;
+}
+.Description >p{
+  font-weight: 600;
+  margin-top: 10px;
+  color: black;
+}
+
+
+.remove{
+background-color: transparent;
+color: #1384b4;
+border: none;
+outline: none;
+margin-top: 10px;
+cursor: pointer;
+/* border: 1px solid red; */
+width: 130px;
+}
+.remove:hover {
+  text-decoration: underline;
+}
