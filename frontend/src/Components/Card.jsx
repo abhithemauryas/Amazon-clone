@@ -3,25 +3,30 @@ import Rating from "@mui/material/Rating";
 import "../CSS/Card.css";
 import { colors } from "@mui/material";
 import { useStateValue } from "./StateProvider";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({ item }) => {
   const [{ basket }, dispatch] = useStateValue();
-  console.log("Basket>>>>>>", basket);
+  const navigate= useNavigate()
+  // console.log("Basket>>>>>>", basket);
   const handleCart = (e) => {
+       const token=localStorage.getItem('user');
+       console.log(token, "token")
+    if(token==null){
+      alert("Please Login First");
+      window.location="/login"
+    }else{
+     
+      navigate("/")
+    }
     dispatch({
       type: "ADD_TO_BASKET",
       item: e,
     });
 
+
   };
-  // {
-//   "_id": "65e77a6b86d8d01f743ed47b",
-//   "title": "This is Rat",
-//   "imageURl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ9zVXSFtV0xTbTMQTaGyZYfO6fjDSKEzfpA&usqp=CAU",
-//   "price": 250,
-//   "rating": 4,
-//   "__v": 0
-// },
+
 
   return (
     <div>

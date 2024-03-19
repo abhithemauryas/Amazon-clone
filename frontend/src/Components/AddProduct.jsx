@@ -7,7 +7,7 @@ const AddProduct = () => {
   const [image, setimage] = useState("");
   const [price, setPrice] = useState(0);
   const [rating, setRating] = useState(0);
-const baseurl="http://localhost:5000"
+const baseurl="https://difficult-crow-baseball-cap.cyclic.app/"
   const addproduct = async(e) => {
     try {
       e.preventDefault();

@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Addres from "../CSS/Addres.css";
 import { useStateValue } from "./StateProvider";
 import { useNavigate } from "react-router-dom";
-import PhoneInput from "react-phone-number-input";
+
 import Footer from "./Footer";
 
 const Address = () => {

@@ -11,7 +11,7 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('')
 
-  const baseurl = "http://localhost:5000";
+  const baseurl = "https://difficult-crow-baseball-cap.cyclic.app";
    
   const fetchSignUpdata=async(e)=>{
     try {

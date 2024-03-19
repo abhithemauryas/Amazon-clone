@@ -11,7 +11,7 @@ import Responsive from "./Slider";
 const Home = () => {
   const [data, setdata]= useState([])
 
-  const baseurl="http://localhost:5000"
+  const baseurl="https://difficult-crow-baseball-cap.cyclic.app"
   const fetchdata=async()=>{
     const config ={
       headers:{

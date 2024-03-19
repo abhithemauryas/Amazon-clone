@@ -6,8 +6,6 @@ const  jwt = require('jsonwebtoken');
 const bcrypt= require("bcrypt")
 
 
-
-
 userRouter.post("/signup", async(req,res)=>{
    const {name,email,password}= req.body;
    try {
@@ -28,13 +26,14 @@ userRouter.post("/signup", async(req,res)=>{
 userRouter.post("/login", async (req, res) => {
         const { email, password } = req.body;
         try {
-            const user= await UserModule.find({email})
-            console.log(user)
-            bcrypt.compare(password,user[0].password,(error,result)=>{
+            const user= await UserModule.findOne({email});
+            if(!user) return res.status(404).send({msg:"user is not found invalid email"})
+            console.log("user",user)
+            bcrypt.compare(password,user.password,(error,result)=>{
                 if(result){
                     res.status(200).send({"msg":"User has beed login  successfully!", "token":jwt.sign({name:"batman"},"bruce")})
                 }else{
-                    res.send({"msg":"Wrong Password"})
+                    res.status(400).send({"msg":"Wrong Password"})
                 }
             })
         } catch (error) {

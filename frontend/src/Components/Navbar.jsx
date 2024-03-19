@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useStateValue } from "./StateProvider";
 import { useNavigate } from "react-router-dom";
 import { colors } from "@mui/material";
 
 const Navbar = () => {
       const [{basket}]= useStateValue();
-      const navigate=useNavigate()
+      const navigate=useNavigate();
+      const token= localStorage.getItem("user"); 
+
+      useEffect(()=>{
+
+      },[token])
   return (
     <div> 
       <div className="Container">
@@ -25,9 +30,12 @@ const Navbar = () => {
               <p>Hello,</p>
               <p>Guest</p >
             </div>
-            <div onClick={()=>navigate('/order')} className="NavButton">
-              <p>Return</p>
-              <p>& Orders</p>
+            <div  className="NavButton">
+              <p onClick={()=>navigate('/order')}>Orders</p>
+              {token? (<p className="logout-btn" onClick={()=>{
+                localStorage.removeItem('user')
+                navigate('/')
+              }}>Logout</p>):(<p onClick={()=>navigate('/login')}>SignIn</p>)}
             </div>
             <div className="BasketButton" onClick={()=>navigate("/checkout")}>
               <img src="./basket-icon.png" alt="" />

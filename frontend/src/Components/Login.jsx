@@ -11,26 +11,36 @@ const Login = () => {
   const [password, setPassword] = useState("")
   const [{}, dispatch]=useStateValue()
    
-  const baseurl = "http://localhost:5000";
+  const baseurl = "https://difficult-crow-baseball-cap.cyclic.app";
 
-   
- 
   const login=async(e)=>{
     try {
       e.preventDefault()
       const loginData ={email,password}
 
      const config={
-       Headers:{
-         "Content-Type":"application/json",
-         Authorization: "Bearer your_token_here",
+       headers:{
+         "Content-Type":"application/json"
        },
      };
-     const {data}= await axios.post(`${baseurl}/login`,loginData,config)
-      console.log(data);
+     const data= await axios.post(`${baseurl}/login`,loginData,config)
+    
+     console.log("data" ,data)
+     console.log(data.data.token, "token");
+     localStorage.setItem('user', JSON.stringify(data.data.token));
+     
       navigate("/")
+      alert("login  successfull");
    } catch (error) {
-     console.error("Error fetching client secret:", error);
+    console.log(error.response.data.msg)
+     console.log(error.response.status, "check error")
+    if(error.response.status===404){
+      navigate( "/Signup")
+      alert("Please Sign Up First")
+    }else if(error.response.status==400){
+      alert("password is wrong")
+    }
+  
    }
   
   }
@@ -43,11 +53,11 @@ const Login = () => {
        <h3>Sign in</h3>
        <div className='InputContainer'>
         <p>Email</p>
-        <input type="email" name="" onChange={(e)=>setEmail(e.target.value)} id="" placeholder= "example@gmail.com"/>
+        <input type="email" name="" value={email} onChange={(e)=>setEmail(e.target.value)} id="" placeholder= "example@gmail.com"/>
        </div>
        <div className='InputContainer'>
         <p>Password</p>
-        <input type="password" name="" onChange={(e)=>setPassword(e.target.value)} id="" placeholder='Enter your password'/>
+        <input type="password" name="" value={password} onChange={(e)=>setPassword(e.target.value)} id="" placeholder='Enter your password'/>
        </div>
        <button className='Login-Button' onClick={login}>Login</button>
       <div className='InfoText'>By continuing, you agree Amazon's <span>Conditions of Use</span>and <span>Private Notice</span></div>

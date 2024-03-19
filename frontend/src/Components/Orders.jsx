@@ -11,7 +11,7 @@ import { getBasketTotal } from "./Reducer";
 const Orders = () => {
     const [data, setdata]= useState([])
     const [{basket}]=useStateValue()
-    const baseurl="http://localhost:5000"
+    const baseurl="https://difficult-crow-baseball-cap.cyclic.app"
     const fetchOrder=async()=>{
       const config ={
         headers:{

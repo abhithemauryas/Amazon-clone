@@ -17,7 +17,7 @@ const Payment = () => {
   const stripe = useStripe();
   const navigate = useNavigate();
 
-  const baseurl = "http://localhost:5000";
+  const baseurl = "https://difficult-crow-baseball-cap.cyclic.app";
 
   const fetchClientSecret = async () => {
     try {
