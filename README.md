@@ -12,8 +12,6 @@ Amazon.com Inc (Amazon) is an online retailer and web service provider. The comp
    <img src="https://img.shields.io/badge/ChakaraUI -282C34?logo=chakraui&logoColor=61DAFB" alt="React  logo" title="React" height="25" />
    <img src="https://img.shields.io/badge/React_Router-282C34?logo=react-router&logoColor=E34F26" alt="react logo" title="React Router" height="25" />
    <img src="https://img.shields.io/badge/Axios-282C34?logo=axios&logoColor=764ABC" alt="Redux logo" title="Redux" height="25" />
-     <img src="https://img.shields.io/badge/Node-282C34?logo=node&logoColor=764ABC" alt="Redux logo" title="Redux" height="25" />
-      <img src="https://img.shields.io/badge/Node-282C34?logo=node&logoColor=764ABC" alt="Redux logo" title="Node.js" height="25" />
          <img src="https://img.shields.io/badge/Stripe-282C34?logo=Stripe&logoColor=764ABC" alt="Redux logo" title="Stripe" height="25" />
             <img src="https://img.shields.io/badge/Node-282C34?logo=Redux&logoColor=764ABC" alt="Redux logo" title="Redux" height="25" />
 
